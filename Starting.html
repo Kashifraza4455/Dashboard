@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modal Show Button</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <!-- Show Modal Button -->
+    <button
+      onclick="showModal()"
+      class="bg-purple-700 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-purple-800"
+    >
+      Show Modal
+    </button>
+
+    <!-- Modal (Initially Hidden) -->
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+    >
+      <!-- Modal Container -->
+      <div
+        class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+      >
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between p-4 border-b border-gray-200"
+        >
+          <h2 class="text-lg font-semibold text-gray-900">New Contact Added</h2>
+          <button
+            onclick="closeModal()"
+            class="text-gray-400 hover:text-gray-600"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex flex-1 overflow-hidden">
+          <!-- Sidebar -->
+          <div class="w-64 border-r border-gray-200 overflow-y-auto">
+            <div class="p-4 space-y-2">
+              <div
+                class="flex items-center space-x-3 bg-[#F9F1FD] text-purple-700 p-3 rounded-lg"
+              >
+                <div class="w-2 h-2 bg-[#551895] rounded-full"></div>
+                <span class="text-sm font-medium">All starting Condition</span>
+              </div>
+              <div
+                class="flex items-center space-x-3 text-gray-600 p-3 hover:bg-gray-100 rounded-lg cursor-pointer"
+              >
+                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                <span class="text-sm">Contacts</span>
+              </div>
+              <div
+                class="flex items-center space-x-3 text-gray-600 p-3 hover:bg-gray-100 rounded-lg cursor-pointer"
+              >
+                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                <span class="text-sm">Transaction</span>
+              </div>
+              <div
+                class="flex items-center space-x-3 text-gray-600 p-3 hover:bg-gray-100 rounded-lg cursor-pointer"
+              >
+                <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
+                <span class="text-sm">Emails</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="flex-1 flex flex-col overflow-hidden">
+            <div class="flex-1 p-8 overflow-y-auto">
+              <div class="max-w-2xl">
+                <!-- Contact joins Segment -->
+                <div
+                  class="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 mb-4 shadow-sm"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-medium text-[#323232] font-bold">
+                        Contact joins Segment
+                      </h3>
+                      <p class="text-sm text-[#A5A5A5]">
+                        Send a Welcome message and update Contact Details
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="bg-[#551895] text-white px-6 py-3 rounded text-sm font-medium"
+                  >
+                    Add
+                  </button>
+                </div>
+
+                <!-- Tag is Added to contact -->
+                <div
+                  class="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 mb-4 shadow-sm"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-medium text-[#323232] font-bold">
+                        Tag is Added to contact
+                      </h3>
+                      <p class="text-sm text-[#A5A5A5]">
+                        Send a Welcome message and update Contact Details
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="bg-[#551895] text-white px-6 py-3 rounded text-sm font-medium"
+                  >
+                    Add
+                  </button>
+                </div>
+
+                <!-- Contacts Completes a Form -->
+                <div
+                  class="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 mb-4 shadow-sm"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-medium text-[#323232] font-bold">
+                        Contacts Completes a Form
+                      </h3>
+                      <p class="text-sm text-[#A5A5A5]">
+                        Send a Welcome message and update Contact Details
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="bg-[#551895] text-white px-6 py-3 rounded text-sm font-medium"
+                  >
+                    Add
+                  </button>
+                </div>
+
+                <!-- Contacts makes a transaction -->
+                <div
+                  class="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 mb-4 shadow-sm"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center"
+                    >
+                      <span class="text-gray-600 font-medium text-sm">$</span>
+                    </div>
+                    <div>
+                      <h3 class="font-medium text-[#323232] font-bold">
+                        Contacts makes a transaction
+                      </h3>
+                      <p class="text-sm text-[#A5A5A5]">
+                        Send a Welcome message and update Contact Details
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="bg-[#551895] text-white px-6 py-3 rounded text-sm font-medium"
+                  >
+                    Add
+                  </button>
+                </div>
+
+                <!-- Contact Schedules Recurring Transaction -->
+                <div
+                  class="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 mb-4 shadow-sm"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-medium text-[#323232] font-bold">
+                        Contact Schedules Recurring Transaction
+                      </h3>
+                      <p class="text-sm text-[#A5A5A5]">
+                        Send a Welcome message and update Contact Details
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="bg-[#551895] text-white px-6 py-3 rounded text-sm font-medium"
+                  >
+                    Add
+                  </button>
+                </div>
+
+                <!-- New Contact Added -->
+                <div
+                  class="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 mb-4 shadow-sm"
+                >
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="w-8 h-8 bg-gray-100 rounded flex items-center justify-center"
+                    >
+                      <svg
+                        class="w-4 h-4 text-gray-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"
+                        ></path>
+                        <circle cx="10" cy="7" r="4" stroke="none"></circle>
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="font-medium text-[#323232] font-bold">
+                        New Contact Added
+                      </h3>
+                      <p class="text-sm text-[#A5A5A5]">
+                        Send a Welcome message and update Contact Details
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    class="bg-[#551895] text-white px-6 py-3 rounded text-sm font-medium"
+                  >
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between p-4 border-t border-gray-200 flex-shrink-0"
+        >
+          <button
+            type="button"
+            class="px-6 py-3 w-[160px] bg-[#EBEFF3] text-[#D2D3D4] font-bold rounded"
+          >
+            Previous
+          </button>
+          <button
+            type="button"
+            class="px-6 py-3 bg-[#551895] w-[160px] font-bold text-white rounded"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+      function showModal() {
+        document.getElementById("modal").classList.remove("hidden");
+      }
+      function closeModal() {
+        document.getElementById("modal").classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>

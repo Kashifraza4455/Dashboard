@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Starting Point Setup Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Button to open modal -->
+    <div class="flex justify-center items-center min-h-screen">
+      <button
+        id="openModalBtn"
+        class="bg-[#551895] text-white font-medium px-6 py-3 rounded-lg transition-colors"
+      >
+        Open Starting Point Setup
+      </button>
+    </div>
+
+    <!-- Modal backdrop -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50"
+    >
+      <!-- Close button OUTSIDE modal box, left side on overlay -->
+      <button
+        id="closeModalBtn"
+        class="absolute left-[22%] top-[5%] text-gray-200 hover:text-white bg-black bg-opacity-40 rounded-full p-2 z-60"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- Modal content container -->
+      <div
+        class="bg-white rounded-lg shadow-lg max-w-3xl w-full mx-4 max-h-[90vh] overflow-y-auto relative"
+      >
+        <!-- Navbar sticky on top inside modal -->
+        <section class="min-h-screen">
+          <!-- Navigation -->
+          <nav
+            class="bg-[#EEEAFF] border-b border-gray-200 px-6 py-2 sticky top-0 z-50"
+          >
+            <div class="flex items-center justify-between max-w-6xl mx-auto">
+              <div class="flex items-center space-x-20">
+                <div class="text-[#551895] font-bold cursor-pointer">
+                  Overview
+                </div>
+                <div
+                  class="text-[#551895] font-bold cursor-pointer flex items-center"
+                >
+                  Contacts
+                  <svg
+                    class="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </div>
+                <div
+                  class="bg-[#551895] w-[200px] font-bold text-center text-white px-4 py-2 rounded-lg font-medium"
+                >
+                  Flow chain
+                </div>
+                <div class="text-[#551895] font-bold cursor-pointer">
+                  History Log
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="flex justify-end pr-4 pt-5">
+            <div class="flex items-center space-x-2">
+              <!-- Minus Button -->
+              <button
+                class="w-8 h-8 bg-[#551895] text-white rounded-full flex items-center justify-center"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" d="M5 12h14" />
+                </svg>
+              </button>
+
+              <!-- Zoom Text with Background -->
+              <div
+                class="bg-[#f4edff] text-[#551895] px-4 py-1 rounded text-sm font-medium"
+              >
+                Zoom 120%
+              </div>
+
+              <!-- Plus Button -->
+              <button
+                class="w-8 h-8 bg-[#551895] text-white rounded-full flex items-center justify-center"
+              >
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" d="M12 5v14m-7-7h14" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="max-w-2xl mx-auto px-6 py-16">
+            <div class="text-center">
+              <h1 class="text-3xl font-bold text-gray-900 mb-4">
+                Set up your Starting point
+              </h1>
+              <p class="text-gray-600 mb-12">
+                Contacts will enter our workflow when they meet the conditions
+                of the Starting point
+              </p>
+
+              <!-- Flow Diagram -->
+              <div
+                class="flex flex-col items-center mb-12 relative pt-10 space-y-6"
+              >
+                <!-- Background Circle -->
+                <div
+                  class="absolute top-0 left-1/2 transform -translate-x-1/2 w-60 h-60 bg-[#f5f1ff] rounded-full z-0"
+                ></div>
+
+                <!-- Card -->
+                <div
+                  class="z-10 bg-white rounded-md shadow-md p-4 w-[45%] relative bottom-[40px]"
+                >
+                  <div class="space-y-3">
+                    <div class="bg-gray-300 h-4 rounded w-3/4 mx-auto"></div>
+                    <div class="bg-gray-200 h-3 rounded w-1/2 mx-auto"></div>
+                  </div>
+                  <!-- Line from card to plus -->
+                  <div
+                    class="absolute bottom-[-32px] left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gray-400 z-0"
+                  ></div>
+                </div>
+
+                <!-- Plus Circle -->
+                <div class="z-10 relative bottom-[32px]">
+                  <div
+                    class="w-14 h-14 rounded-full border-2 border-[#6e28c9] flex items-center justify-center bg-white relative z-10"
+                  >
+                    <svg
+                      class="w-6 h-6 text-[#6e28c9]"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 4v16m8-8H4"
+                      />
+                    </svg>
+                  </div>
+                  <!-- Line from plus to arrow -->
+                  <div
+                    class="absolute bottom-[-32px] left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gray-400 z-0"
+                  ></div>
+                </div>
+
+                <!-- Arrow Down -->
+                <div class="z-10 text-gray-400 relative bottom-[35px]">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    />
+                  </svg>
+                </div>
+
+                <!-- Button -->
+                <div class="z-10">
+                  <button
+                    class="bg-[#551895] text-white font-medium px-6 py-3 rounded-md shadow-md transition"
+                  >
+                    <a href="Starting.html">Choose a starting point</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("modal");
+      const openBtn = document.getElementById("openModalBtn");
+      const closeBtn = document.getElementById("closeModalBtn");
+
+      openBtn.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden"; // prevent background scroll
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        document.body.style.overflow = ""; // restore scroll
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          document.body.style.overflow = "";
+        }
+      });
+    </script>
+  </body>
+</html>
